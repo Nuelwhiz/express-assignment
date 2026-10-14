@@ -2,5 +2,11 @@
 </head>
 <body>
     <%- include('layout/header') %>
-<h1>users</h1>
+<h1>users available</h1>
+<ul>
+    <% users.forEach(user => { %>
+        <li><%= user.name %></li>
+        <li><%= emails[users.indexOf(user)].email %></li>
+    <% }); %>
+</ul>
     <%- include('layout/footer') %>
